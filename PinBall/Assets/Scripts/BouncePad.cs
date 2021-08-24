@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BouncePad : MonoBehaviour
+public class BouncePad : MonoBehaviour, ChildTriggerEnter, ChildTriggerExit
 {
     public bool bounceEnabled;
     public float bounceDelay;
@@ -24,6 +24,16 @@ public class BouncePad : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnTriggerEnterChild(Collider childCollider, Collider other)
+    {
+        Debug.LogWarning("Child Enter");
+    }
+
+    public void OnTriggerExitChild(Collider childCollider, Collider other)
+    {
+        Debug.LogWarning("Child Exit");
     }
 
     private void OnDrawGizmos()
