@@ -60,9 +60,12 @@ public class TriggerPad : MonoBehaviour, ChildTriggerEnter, ChildTriggerExit
 
     public void OnTriggerEnterChild(Collider childCollider, Collider other)
     {
-        collidedList.Add(other.gameObject);
-        collidedListTime.Add(other.gameObject, Time.time);
-        // Debug.LogWarning("Child Enter");
+        if (other.gameObject.tag == "Ball")
+        {
+            collidedList.Add(other.gameObject);
+            collidedListTime.Add(other.gameObject, Time.time);
+            // Debug.LogWarning("Child Enter");
+        }
     }
 
     public void OnTriggerExitChild(Collider childCollider, Collider other)
