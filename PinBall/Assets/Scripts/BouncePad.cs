@@ -88,7 +88,7 @@ public class BouncePad : MonoBehaviour, ChildTriggerEnter, ChildTriggerExit
     {
         if (bounceType == BounceType.directional) {
             Vector3 start = gameObject.transform.position;
-            Vector3 end = start + GetLaunchVector();
+            Vector3 end = start + GetLaunchVector() * Config.GizmoVectorLengthMultiplier;
             Gizmos.color = Color.red;
             Gizmos.DrawLine(start, end);
         }
