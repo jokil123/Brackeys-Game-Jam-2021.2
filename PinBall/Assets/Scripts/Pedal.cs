@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pedal : MonoBehaviour
-{ 
+{
+    public Transform targetTransform;
+    public Transform restTransform;
+
     public float animationSpeed;
 
     private float currentAnimationValue;
     private float targetAnimationValue;
 
-    private Animator animationComponent;
+    private GameObject AnimationPivot;
+    private Rigidbody AnimationRigidBody;
 
     public void Animate(float target)
     {
@@ -18,12 +22,15 @@ public class Pedal : MonoBehaviour
 
     void Awake()
     {
-        animationComponent = GetComponentInChildren<Animator>();
+        AnimationPivot = gameObject.transform.Find("AnimationPivot").gameObject;
+        AnimationRigidBody = AnimationPivot.GetComponent<Rigidbody>();
     }
+     
 
-    void Update ()
+    void Update()
     {
         InterpolateToTarget();
+        UpdateAnimationState();
     }
 
     void InterpolateToTarget()
@@ -31,7 +38,7 @@ public class Pedal : MonoBehaviour
         float animationDelta = targetAnimationValue - currentAnimationValue;
 
         Debug.Log(animationDelta);
-        
+
         if (Mathf.Abs(animationDelta) < animationSpeed)
         {
             currentAnimationValue = targetAnimationValue;
@@ -44,14 +51,18 @@ public class Pedal : MonoBehaviour
         }
 
         currentAnimationValue = Mathf.Clamp(currentAnimationValue, 0, 1);
-
-        UpdateAnimationState();
     }
 
     void UpdateAnimationState()
     {
-        float animationDuration = animationComponent.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        Vector3 interpolatedPosition = Vector3.Lerp(restTransform.position, targetTransform.position, currentAnimationValue);
 
-        animationComponent.SetFloat("AnimationTime", animationDuration * currentAnimationValue);
+        Quaternion interpolatedRotation = Quaternion.Slerp(restTransform.rotation, targetTransform.rotation, currentAnimationValue);
+
+        Vector3 interpolatedScale = Vector3.Lerp(restTransform.localScale, targetTransform.localScale, currentAnimationValue);
+
+        AnimationRigidBody.MovePosition(interpolatedPosition);
+        AnimationRigidBody.MoveRotation(interpolatedRotation);
+        AnimationPivot.transform.localScale = interpolatedScale;
     }
 }
