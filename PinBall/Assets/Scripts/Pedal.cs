@@ -30,22 +30,27 @@ public class Pedal : MonoBehaviour
     {
         float animationDelta = targetAnimationValue - currentAnimationValue;
 
-        if (animationDelta < animationSpeed)
+        Debug.Log(animationDelta);
+        
+        if (Mathf.Abs(animationDelta) < animationSpeed)
         {
             currentAnimationValue = targetAnimationValue;
         }
         else
         {
             int animationDirection = (int)Mathf.Sign(animationDelta);
-            currentAnimationValue = animationDirection * animationSpeed;
+
+            currentAnimationValue += animationDirection * animationSpeed;
         }
+
+        currentAnimationValue = Mathf.Clamp(currentAnimationValue, 0, 1);
 
         UpdateAnimationState();
     }
 
     void UpdateAnimationState()
     {
-        float animationDuration= animationComponent.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        float animationDuration = animationComponent.GetCurrentAnimatorClipInfo(0)[0].clip.length;
 
         animationComponent.SetFloat("AnimationTime", animationDuration * currentAnimationValue);
     }
