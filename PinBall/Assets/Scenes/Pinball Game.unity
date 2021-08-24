@@ -565,13 +565,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f261b0cc5ddce642a444087fecf97c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceEnabled: 1
-  bounceDelay: 1
-  bounceCooldown: 1
-  bounceType: 1
+  triggerEnabled: 1
+  triggerDelay: 1
+  triggerCooldown: 1
+  triggerSeperately: 0
+  lastTriggered: 0
   bounceDirection: {x: 0, y: 0, z: 1}
-  bounceStrengthMultiplier: 1000
-  bounceSeperately: 0
+  bounceStrengthMultiplier: 100
+  bounceType: 0
 --- !u!65 &1632416336
 BoxCollider:
   m_ObjectHideFlags: 0
