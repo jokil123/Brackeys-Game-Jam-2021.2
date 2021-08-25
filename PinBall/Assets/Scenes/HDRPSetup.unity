@@ -1355,34 +1355,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Time
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope
-      value: -0.21284541
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
-      value: 0.9035088
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860578560359005192, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outSlope
-      value: -0.21284541
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
 --- !u!114 &2022390789 stripped
