@@ -27,7 +27,7 @@ public class Pedal : MonoBehaviour
     }
      
 
-    void Update()
+    void FixedUpdate()
     {
         InterpolateToTarget();
         UpdateAnimationState();
@@ -47,7 +47,7 @@ public class Pedal : MonoBehaviour
         {
             int animationDirection = (int)Mathf.Sign(animationDelta);
 
-            currentAnimationValue += animationDirection * animationSpeed;
+            currentAnimationValue += animationDirection * animationSpeed * Time.deltaTime;
         }
 
         currentAnimationValue = Mathf.Clamp(currentAnimationValue, 0, 1);
