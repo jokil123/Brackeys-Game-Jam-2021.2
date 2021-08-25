@@ -141,18 +141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3211950709358025079, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
-      propertyPath: showGravityArrow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211950709358025079, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
-      propertyPath: gravityDirection.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211950709358025079, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
-      propertyPath: gravityDirection.z
-      value: -0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 3637300201894768686, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
       propertyPath: m_Name
       value: GameMaster
