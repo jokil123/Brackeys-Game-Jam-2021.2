@@ -16,7 +16,7 @@ public class ScoreSystem : MonoBehaviour
         get { return _score; }
         set { 
             _score = value;
-            txtHighScore.text = $"Score: {value}";
+            txtScore.text = $"Score: {value}";
             if (value > HighScore)
             {
                 HighScore = value;
@@ -33,5 +33,11 @@ public class ScoreSystem : MonoBehaviour
             _highScore = value;
             txtHighScore.text = $"High Score: {value}";
         }
+    }
+
+    private void Start()
+    {
+        HighScore = 0;
+        Score = 0;
     }
 }

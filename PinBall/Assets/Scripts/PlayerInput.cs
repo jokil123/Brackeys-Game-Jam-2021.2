@@ -13,6 +13,30 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Quit Game
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            // Left Handle up
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            // Left Handle down
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            // Right Handle up
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            // Right Hanlde down
+        }
     }
 }
