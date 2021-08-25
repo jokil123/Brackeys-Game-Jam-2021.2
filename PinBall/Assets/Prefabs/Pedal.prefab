@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 4481734177369909483}
   restTransform: {fileID: 4481734178382842131}
-  animationSpeed: 0.2
+  animationSpeed: 0.1
 --- !u!1 &4481734177369909480
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,11 +249,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!1001 &8124040738535936688
 PrefabInstance:
   m_ObjectHideFlags: 0
