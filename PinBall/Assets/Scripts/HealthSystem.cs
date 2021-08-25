@@ -9,8 +9,12 @@ public class HealthSystem : MonoBehaviour
     [SerializeField]
     private Slider hpSlider;
 
+    [Header("Health Logic")]
     private int tick = 0;
-    private int maxHp = 100;
+    [SerializeField]
+    private int regeneration = 1;
+    [SerializeField]
+    private int maxHp = 1000;
     private int hp;
 
     public int Health
@@ -38,15 +42,15 @@ public class HealthSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Health -= 10;
+            Health -= 100;
         }
     }
 
     private void FixedUpdate()
     {
         tick++;
-        // Execute every 5th loop
-        if (tick % 5 == 0)
+        // Execute every 2nd loop
+        if (tick % 2 == 0)
         {
             Health++;
         }
