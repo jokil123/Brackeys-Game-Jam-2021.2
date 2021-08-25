@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public Pedal leftPedal;
+    public Pedal rightPedal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,24 +23,8 @@ public class PlayerInput : MonoBehaviour
             Application.Quit();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            // Left Handle up
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            // Left Handle down
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            // Right Handle up
-        }
-
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            // Right Hanlde down
-        }
+        // Player Input For Pedals
+        leftPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)));
+        rightPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.RightArrow)));
     }
 }

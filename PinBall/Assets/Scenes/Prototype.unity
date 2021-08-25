@@ -151,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637300201894768720, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3637300201894768720, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,7 +216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 442657809373102741, guid: b682a17613e99f046b6cde6f56addc1d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 442657809373102741, guid: b682a17613e99f046b6cde6f56addc1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -346,7 +346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 54.908, y: 0, z: 0}
 --- !u!82 &248766799
 AudioSource:
@@ -538,7 +538,7 @@ Transform:
   m_LocalScale: {x: 26.153023, y: 1, z: 47.71195}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &652980736
 PrefabInstance:
@@ -606,7 +606,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4481734176972420378, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
       propertyPath: m_Name
-      value: Pedal
+      value: PedalRight
       objectReference: {fileID: 0}
     - target: {fileID: 4481734176972420580, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
       propertyPath: m_RootOrder
@@ -874,7 +874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1913859973
 PrefabInstance:
@@ -885,7 +885,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 592087860427526234, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 592087860427526234, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
       propertyPath: m_LocalPosition.x
@@ -957,7 +957,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4481734176972420378, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
       propertyPath: m_Name
-      value: Pedal (1)
+      value: PedalLeft
       objectReference: {fileID: 0}
     - target: {fileID: 4481734176972420580, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
       propertyPath: m_RootOrder
@@ -1011,7 +1011,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -60
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4481734176972420583, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a130214eeede1434eaad90aa29cab65e, type: 3}
 --- !u!1001 &2112689975
 PrefabInstance:
@@ -1030,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4396207306891211281, guid: f7ee8b401244e4546b7db6e7554d59a0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4396207306891211281, guid: f7ee8b401244e4546b7db6e7554d59a0, type: 3}
       propertyPath: m_AnchorMax.x
