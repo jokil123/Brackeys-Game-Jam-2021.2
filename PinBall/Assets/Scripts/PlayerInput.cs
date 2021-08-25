@@ -8,6 +8,9 @@ public class PlayerInput : MonoBehaviour
     public Pedal leftPedal;
     public Pedal rightPedal;
 
+    public GameObject ball;
+    public Transform ballSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +29,10 @@ public class PlayerInput : MonoBehaviour
         // Player Input For Pedals
         leftPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)));
         rightPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.RightArrow)));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject.Instantiate(ball, ballSpawn.position, ballSpawn.rotation);
+        }
     }
 }

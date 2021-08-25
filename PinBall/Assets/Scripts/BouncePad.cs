@@ -16,15 +16,35 @@ public class BouncePad : TriggerPad
             lastTriggered = Time.time;
             foreach (GameObject bounceObject in bounceObjects)
             {
-                bounceObject.GetComponent<Rigidbody>().AddForce(GetLaunchVector());
+                bounceObject.GetComponent<Rigidbody>().AddForce(GetLaunchVector(bounceObject));
             }
         }
     }
 
-    Vector3 GetLaunchVector()
+    Vector3 GetLaunchVector(GameObject bounceObject)
     {
-        return gameObject.transform.rotation * bounceDirection * bounceStrengthMultiplier;
+        Vector3 bounceDireciton = Vector3.zero;
 
+        switch (bounceType)
+        {
+            case BounceType.directional:
+                bounceDireciton = gameObject.transform.rotation * bounceDirection;
+                break;
+            case BounceType.radial:
+                bounceDireciton = bounceObject.transform.position - gameObject.transform.position;
+
+                break;
+            case BounceType.reflect:
+
+                break;
+            case BounceType.random:
+                bounceDireciton = Random.insideUnitSphere;
+                break;
+        }
+
+
+
+        return bounceDireciton.normalized * bounceStrengthMultiplier;
     }
 
 
@@ -34,7 +54,7 @@ public class BouncePad : TriggerPad
         if (bounceType == BounceType.directional)
         {
             Vector3 start = gameObject.transform.position;
-            Vector3 end = start + GetLaunchVector() * Config.GizmoVectorLengthMultiplier;
+            Vector3 end = start + GetLaunchVector(gameObject) * Config.GizmoVectorLengthMultiplier; // Oof, very dirty code right here
             Gizmos.color = Color.red;
             Gizmos.DrawLine(start, end);
         }
