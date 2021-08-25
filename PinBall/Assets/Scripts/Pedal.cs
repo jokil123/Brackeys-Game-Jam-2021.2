@@ -37,7 +37,7 @@ public class Pedal : MonoBehaviour
     {
         float animationDelta = targetAnimationValue - currentAnimationValue;
 
-        Debug.Log(animationDelta);
+        //Debug.Log(animationDelta);
 
         if (Mathf.Abs(animationDelta) < animationSpeed)
         {
