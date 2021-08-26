@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public HealthSystem healthSystem;
+    public int damage = 10;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Ball")
+        {
+            GameObject.Destroy(other);
+            healthSystem.Health -= 10;
+        }
     }
 }
+ 
