@@ -13,7 +13,7 @@ public class GravityController : MonoBehaviour
     void Awake()
     {
         Physics.gravity = gravityDirection.normalized * gravityStrength;
-        Debug.Log(Physics.gravity.y);
+        // Debug.Log(Physics.gravity.y);
     }
 
     void OnDrawGizmos()

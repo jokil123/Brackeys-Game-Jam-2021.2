@@ -75,6 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a67504c3f7362f4593ad16379f549b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftPedal: {fileID: 0}
+  rightPedal: {fileID: 0}
+  ball: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
+  ballSpawn: {fileID: 0}
 --- !u!114 &3211950709358025079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,5 +92,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityDirection: {x: 0, y: -1, z: -0.25}
-  gravityStrength: 9.81
+  gravityStrength: 100
   showGravityArrow: 1

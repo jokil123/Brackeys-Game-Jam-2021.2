@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerEnabled: 1
-  triggerDelay: 0
-  triggerCooldown: 0.5
-  triggerSeperately: 0
+  triggerDelay: 0.1
+  triggerCooldown: 0
+  triggerSeperately: 1
   lastTriggered: 0
   bounceDirection: {x: 0, y: 0, z: 1}
   bounceStrengthMultiplier: 5000

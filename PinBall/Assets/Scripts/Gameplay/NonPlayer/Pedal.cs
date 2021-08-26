@@ -47,7 +47,7 @@ public class Pedal : MonoBehaviour
         {
             int animationDirection = (int)Mathf.Sign(animationDelta);
 
-            currentAnimationValue += animationDirection * animationSpeed * Time.deltaTime;
+            currentAnimationValue += animationDirection * animationSpeed;
         }
 
         currentAnimationValue = Mathf.Clamp(currentAnimationValue, 0, 1);
@@ -55,6 +55,8 @@ public class Pedal : MonoBehaviour
 
     void UpdateAnimationState()
     {
+        Debug.Log(currentAnimationValue);
+
         Vector3 interpolatedPosition = Vector3.Lerp(restTransform.position, targetTransform.position, currentAnimationValue);
 
         Quaternion interpolatedRotation = Quaternion.Slerp(restTransform.rotation, targetTransform.rotation, currentAnimationValue);

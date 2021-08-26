@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 4481734177369909483}
   restTransform: {fileID: 4481734178382842131}
-  animationSpeed: 0.5
+  animationSpeed: 0.25
 --- !u!1 &4481734177369909480
 GameObject:
   m_ObjectHideFlags: 0
