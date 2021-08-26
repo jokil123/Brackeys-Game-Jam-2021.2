@@ -13,9 +13,12 @@ public class DeathZone : MonoBehaviour
         if (other.gameObject.tag == "Ball")
         {
             GameObject.Destroy(other.gameObject);
-            healthSystem.Health -= 10;
-            spawnSystem.ballCount -= 1;
-            spawnSystem.AddBallsToSpawn();
+            if (spawnSystem.gameIsRunning)
+            {
+                healthSystem.Health -= 100;
+                spawnSystem.ballCount -= 1;
+                spawnSystem.AddBallsToSpawn();
+            }
         }
     }
 }

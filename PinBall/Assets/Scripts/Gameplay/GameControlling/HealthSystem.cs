@@ -17,6 +17,14 @@ public class HealthSystem : MonoBehaviour
     private int maxHp = 1000;
     private int hp;
 
+    [Header("Game Over Components")]
+    [SerializeField]
+    private GameObject gameOverUI;
+    [SerializeField]
+    private Text gameOverScoreText;
+    private ScoreSystem scoreSystem;
+    private SpawnSystem spawnSystem;
+
     public int Health
     {
         get { return hp; }
@@ -25,7 +33,10 @@ public class HealthSystem : MonoBehaviour
             hp = (value >= 0 ? (value > maxHp ? maxHp : value) : 0);
             if (hp == 0)
             {
-                // Game Over
+                spawnSystem.gameIsRunning = false;
+                gameOverScoreText.text = $"Score: {scoreSystem.Score}";
+                gameOverUI.SetActive(true);
+                Health = maxHp;
             }
         }
     }
@@ -33,6 +44,8 @@ public class HealthSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scoreSystem = GetComponent<ScoreSystem>();
+        spawnSystem = GetComponent<SpawnSystem>();
         hpSlider.maxValue = maxHp;
         Health = maxHp;
     }
