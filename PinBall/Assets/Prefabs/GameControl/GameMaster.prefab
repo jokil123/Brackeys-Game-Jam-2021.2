@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3637300201894768723}
   - component: {fileID: 8041480598783719030}
   - component: {fileID: 3211950709358025079}
+  - component: {fileID: 6045316965569920221}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -77,8 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPedal: {fileID: 0}
   rightPedal: {fileID: 0}
-  ball: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
-  ballSpawn: {fileID: 0}
+  spawnSystem: {fileID: 6045316965569920221}
 --- !u!114 &3211950709358025079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,3 +94,18 @@ MonoBehaviour:
   gravityDirection: {x: 0, y: -1, z: -0.25}
   gravityStrength: 100
   showGravityArrow: 1
+--- !u!114 &6045316965569920221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3637300201894768686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c79c9a8fe08b534ebc509f358a2b514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSpawner: {fileID: 0}
+  ballPrefab: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
+  gameIsRunning: 0

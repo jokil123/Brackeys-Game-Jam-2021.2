@@ -18177,8 +18177,8 @@ PrefabInstance:
       propertyPath: txtHighScore
       value: 
       objectReference: {fileID: 1237065655}
-    - target: {fileID: 8041480598783719030, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
-      propertyPath: ballSpawn
+    - target: {fileID: 6045316965569920221, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
+      propertyPath: ballSpawner
       value: 
       objectReference: {fileID: 2142139751}
     - target: {fileID: 8041480598783719030, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}

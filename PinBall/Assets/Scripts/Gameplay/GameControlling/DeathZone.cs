@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
+    public SpawnSystem spawnSystem;
     public HealthSystem healthSystem;
     public int damage = 10;
 
@@ -11,9 +12,10 @@ public class DeathZone : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
-            Debug.Log("your mum");
             GameObject.Destroy(other.gameObject);
             healthSystem.Health -= 10;
+            spawnSystem.ballCount -= 1;
+            spawnSystem.AddBallsToSpawn();
         }
     }
 }
