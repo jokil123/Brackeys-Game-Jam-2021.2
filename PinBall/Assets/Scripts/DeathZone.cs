@@ -9,9 +9,10 @@ public class DeathZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ball")
+        if (other.gameObject.tag == "Ball")
         {
-            GameObject.Destroy(other);
+            Debug.Log("your mum");
+            GameObject.Destroy(other.gameObject);
             healthSystem.Health -= 10;
         }
     }
