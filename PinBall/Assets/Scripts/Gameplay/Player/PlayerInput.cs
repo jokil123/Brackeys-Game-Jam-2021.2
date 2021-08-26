@@ -8,12 +8,15 @@ public class PlayerInput : MonoBehaviour
     public Pedal leftPedal;
     public Pedal rightPedal;
 
-    public SpawnSystem spawnSystem;
+    private SpawnSystem spawnSystem;
+    public GameObject startScreen;
+    public GameObject gameOverUI;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnSystem = GetComponent<SpawnSystem>();
+        startScreen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -34,6 +37,8 @@ public class PlayerInput : MonoBehaviour
             if (!spawnSystem.gameIsRunning)
             {
                 spawnSystem.StartGame();
+                startScreen.SetActive(false);
+                gameOverUI.SetActive(false);
                 Debug.Log("Started Game!");
             }
         }
