@@ -265,6 +265,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPadle
       objectReference: {fileID: 0}
+    - target: {fileID: 1391049029120553373, guid: c757bd4e5128ef94bab32b768351bcb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 553eddb274a1f174f94889dece166c93, type: 2}
+    - target: {fileID: 1391049029120553373, guid: c757bd4e5128ef94bab32b768351bcb2, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb89c13abb1de9f4e9dffbcb609b2af5, type: 2}
     - target: {fileID: 2728513295834113598, guid: c757bd4e5128ef94bab32b768351bcb2, type: 3}
       propertyPath: m_RootOrder
       value: 1
