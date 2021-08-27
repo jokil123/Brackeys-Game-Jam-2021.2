@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using System.Linq;
 
 public class BouncePad : TriggerPad
@@ -8,6 +9,8 @@ public class BouncePad : TriggerPad
     public Vector3 bounceDirection;
     public float bounceStrengthMultiplier;
     public BounceType bounceType;
+
+    public VisualEffect particleEffect;
 
     public override void TriggerAction(List<GameObject> bounceObjects)
     {
