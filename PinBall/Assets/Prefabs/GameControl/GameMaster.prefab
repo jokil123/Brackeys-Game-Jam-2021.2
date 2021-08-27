@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8041480598783719030}
   - component: {fileID: 3211950709358025079}
   - component: {fileID: 6045316965569920221}
+  - component: {fileID: 4117885495722217738}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -50,6 +51,8 @@ MonoBehaviour:
   hpSlider: {fileID: 0}
   regeneration: 1
   maxHp: 1000
+  gameOverUI: {fileID: 0}
+  gameOverScoreText: {fileID: 0}
 --- !u!114 &3637300201894768723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPedal: {fileID: 0}
   rightPedal: {fileID: 0}
-  spawnSystem: {fileID: 6045316965569920221}
+  startScreen: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!114 &3211950709358025079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +113,16 @@ MonoBehaviour:
   ballSpawner: {fileID: 0}
   ballPrefab: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
   gameIsRunning: 0
+  ballCount: 0
+--- !u!114 &4117885495722217738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3637300201894768686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50010904c06192a43ac3895827ee81bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

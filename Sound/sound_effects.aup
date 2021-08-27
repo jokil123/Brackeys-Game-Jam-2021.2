@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="sound_effects_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0067296333" sel1="0.0067296333" vpos="0" h="0.0000000000" zoom="594.3860234791" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Software" value="Lavf57.71.100"/>
+		<tag name="YEAR" value="2017"/>
+		<tag name="ARTIST" value="BerglindSigurjons"/>
+		<tag name="TITLE" value="gameplay01"/>
+	</tags>
+	<wavetrack name="swoosh" isSelected="0" height="154" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="40213">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808cde.au" len="40213" min="-0.739043" max="0.499193" rms="0.090646"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Bingus" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="34563">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808faf.au" len="34563" min="-0.795795" max="0.770189" rms="0.057281"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Pedal_1" isSelected="1" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="14987">
+				<waveblock start="0">
+					<simpleblockfile filename="e080814a.au" len="14987" min="-0.737858" max="0.864473" rms="0.108916"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Pedal_2" isSelected="0" height="150" minimized="0" channel="2" linked="0" mute="0" solo="0" rate="96000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="35371">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808a3a.au" len="35371" min="-0.23645" max="0.347929" rms="0.03494"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
