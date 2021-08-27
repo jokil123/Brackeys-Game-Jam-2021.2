@@ -14,9 +14,26 @@ public class BouncePad : TriggerPad
         if (triggerEnabled)
         {
             lastTriggered = Time.time;
+
+            
+
+
             foreach (GameObject bounceObject in bounceObjects)
             {
-                bounceObject.GetComponent<Rigidbody>().AddForce(GetLaunchVector(bounceObject));
+                Vector3 launchVector = GetLaunchVector(bounceObject);
+
+                Rigidbody bounceRigidbody = bounceObject.GetComponent<Rigidbody>();
+
+                bounceObject.GetComponent<Rigidbody>().AddForce(launchVector);
+
+
+                if (particleEffect)
+                {
+                    // Debug.DrawLine(gameObject.transform.position, gameObject.transform.position + launchVector, Color.blue, 1);
+
+                    particleEffect.SetVector3("Direction", bounceRigidbody.velocity);
+                    particleEffect.Play();
+                }
             }
         }
     }

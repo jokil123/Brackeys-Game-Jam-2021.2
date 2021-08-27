@@ -44,6 +44,7 @@ Material:
     - OnTime: 0.1
     - TimeOffset: 0
     - TransitionWidth: -3
+    - Transition_Width: 3
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
