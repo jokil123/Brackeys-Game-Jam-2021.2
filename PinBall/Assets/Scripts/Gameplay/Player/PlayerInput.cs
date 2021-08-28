@@ -29,8 +29,51 @@ public class PlayerInput : MonoBehaviour
         }
 
         // Player Input For Pedals
-        leftPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.LeftArrow)));
-        rightPedal.Animate(Convert.ToInt32(Input.GetKey(KeyCode.RightArrow)));
+
+        bool leftKeyBool = false;
+
+        List<KeyCode> leftKeys = new List<KeyCode>();
+        leftKeys.Add(KeyCode.A);
+        leftKeys.Add(KeyCode.LeftArrow);
+        leftKeys.Add(KeyCode.Y);
+        leftKeys.Add(KeyCode.X);
+
+
+        bool rightKeyBool = false;
+
+        List<KeyCode> rightKeys = new List<KeyCode>();
+        rightKeys.Add(KeyCode.D);
+        rightKeys.Add(KeyCode.RightArrow);
+        rightKeys.Add(KeyCode.Period);
+        rightKeys.Add(KeyCode.Comma);
+
+
+        foreach (KeyCode key in leftKeys)
+        {
+            leftKeyBool = leftKeyBool || Input.GetKey(key);
+        }
+
+        foreach (KeyCode key in rightKeys)
+        {
+            rightKeyBool = rightKeyBool || Input.GetKey(key);
+        }
+
+
+        leftPedal.Animate(Convert.ToInt32(leftKeyBool));
+        rightPedal.Animate(Convert.ToInt32(rightKeyBool));
+
+
+        // Sound For Pedals
+
+        if (leftKeyBool)
+        {
+            leftPedal.pedalSound.Play();
+        }
+        if (rightKeyBool)
+        {
+            rightPedal.pedalSound.Play();
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -41,17 +84,6 @@ public class PlayerInput : MonoBehaviour
                 gameOverUI.SetActive(false);
                 Debug.Log("Started Game!");
             }
-        }
-
-        // Sound For Pedals
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            leftPedal.pedalSound.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            rightPedal.pedalSound.Play();
         }
     }
 }
