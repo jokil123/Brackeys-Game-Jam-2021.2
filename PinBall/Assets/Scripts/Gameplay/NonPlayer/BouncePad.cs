@@ -6,6 +6,12 @@ using System.Linq;
 
 public class BouncePad : TriggerPad
 {
+    [Header("Score")]
+    public bool giveScore = true;
+    private int scoreAmount = 10;
+    private ScoreSystem scoreSystem;
+    private SpawnSystem spawnSystem;
+
     public Vector3 bounceDirection;
     public float bounceStrengthMultiplier;
     public BounceType bounceType;
@@ -29,6 +35,10 @@ public class BouncePad : TriggerPad
 
                 bounceObject.GetComponent<Rigidbody>().AddForce(launchVector);
 
+                if (giveScore)
+                {
+                    scoreSystem.Score += scoreAmount;
+                }
 
                 if (particleEffect)
                 {
@@ -67,8 +77,6 @@ public class BouncePad : TriggerPad
         return bounceDireciton.normalized * bounceStrengthMultiplier;
     }
 
-
-
     private void OnDrawGizmos()
     {
         if (bounceType == BounceType.directional)
@@ -78,6 +86,13 @@ public class BouncePad : TriggerPad
             Gizmos.color = Color.red;
             Gizmos.DrawLine(start, end);
         }
+    }
+
+    private void Start()
+    {
+        GameObject gameMaster = GameObject.FindGameObjectWithTag("GameMaster");
+        scoreSystem = gameMaster.GetComponent<ScoreSystem>();
+        spawnSystem = gameMaster.GetComponent<SpawnSystem>();
     }
 }
 

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4117885495722217738}
   m_Layer: 0
   m_Name: GameMaster
-  m_TagString: Untagged
+  m_TagString: GameMaster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   ballSpawner: {fileID: 0}
   ballPrefab: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
   gameIsRunning: 0
-  ballCount: 0
+  ballCountTxt: {fileID: 0}
 --- !u!114 &4117885495722217738
 MonoBehaviour:
   m_ObjectHideFlags: 0

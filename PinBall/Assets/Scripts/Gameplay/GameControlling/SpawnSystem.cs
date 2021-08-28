@@ -40,7 +40,6 @@ public class SpawnSystem : MonoBehaviour
             {
                 GameObject.Instantiate(ballPrefab, ballSpawner.position, ballSpawner.rotation);
                 BallCount += 1;
-                scoreSystem.Score += 1;
             }
             yield return new WaitForSeconds(0.5f);
         }
