@@ -31,6 +31,7 @@ public class PlayerInput : MonoBehaviour
         // Player Input For Pedals
 
         bool leftKeyBool = false;
+        bool leftKeyDownBool = false;
 
         List<KeyCode> leftKeys = new List<KeyCode>();
         leftKeys.Add(KeyCode.A);
@@ -40,6 +41,7 @@ public class PlayerInput : MonoBehaviour
 
 
         bool rightKeyBool = false;
+        bool rightKeyDownBool = false;
 
         List<KeyCode> rightKeys = new List<KeyCode>();
         rightKeys.Add(KeyCode.D);
@@ -51,11 +53,13 @@ public class PlayerInput : MonoBehaviour
         foreach (KeyCode key in leftKeys)
         {
             leftKeyBool = leftKeyBool || Input.GetKey(key);
+            leftKeyDownBool = leftKeyDownBool || Input.GetKeyDown(key);
         }
 
         foreach (KeyCode key in rightKeys)
         {
             rightKeyBool = rightKeyBool || Input.GetKey(key);
+            rightKeyDownBool = rightKeyDownBool || Input.GetKeyDown(key);
         }
 
 
@@ -65,11 +69,11 @@ public class PlayerInput : MonoBehaviour
 
         // Sound For Pedals
 
-        if (leftKeyBool)
+        if (leftKeyDownBool)
         {
             leftPedal.pedalSound.Play();
         }
-        if (rightKeyBool)
+        if (rightKeyDownBool)
         {
             rightPedal.pedalSound.Play();
         }

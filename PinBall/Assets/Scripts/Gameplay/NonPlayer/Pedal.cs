@@ -58,7 +58,7 @@ public class Pedal : MonoBehaviour
 
     void UpdateAnimationState()
     {
-        Debug.Log(currentAnimationValue);
+        //Debug.Log(currentAnimationValue);
 
         Vector3 interpolatedPosition = Vector3.Lerp(restTransform.position, targetTransform.position, currentAnimationValue);
 
