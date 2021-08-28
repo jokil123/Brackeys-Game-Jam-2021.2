@@ -17,9 +17,3 @@ public class SoundManager : MonoBehaviour
         
     }
 }
-
-public class AudioSource
-{
-    public string name;
-    public AudioClip audioClip;
-}

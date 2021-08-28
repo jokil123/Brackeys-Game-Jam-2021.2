@@ -12,6 +12,10 @@ public class BouncePad : TriggerPad
     private ScoreSystem scoreSystem;
     private SpawnSystem spawnSystem;
 
+    [Header("Sound")]
+    public AudioSource impactSound;
+    public bool playSound = false;
+
     public Vector3 bounceDirection;
     public float bounceStrengthMultiplier;
     public BounceType bounceType;
@@ -24,9 +28,6 @@ public class BouncePad : TriggerPad
         {
             lastTriggered = Time.time;
 
-            
-
-
             foreach (GameObject bounceObject in bounceObjects)
             {
                 Vector3 launchVector = GetLaunchVector(bounceObject);
@@ -35,10 +36,9 @@ public class BouncePad : TriggerPad
 
                 bounceObject.GetComponent<Rigidbody>().AddForce(launchVector);
 
-                if (giveScore)
-                {
-                    scoreSystem.Score += scoreAmount;
-                }
+                if (playSound) { impactSound.Play(); }
+
+                if (giveScore && spawnSystem.gameIsRunning) { scoreSystem.Score += scoreAmount; }
 
                 if (particleEffect)
                 {
