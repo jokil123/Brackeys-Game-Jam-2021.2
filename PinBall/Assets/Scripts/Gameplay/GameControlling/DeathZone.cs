@@ -16,7 +16,7 @@ public class DeathZone : MonoBehaviour
             if (spawnSystem.gameIsRunning)
             {
                 healthSystem.Health -= 100;
-                spawnSystem.ballCount -= 1;
+                spawnSystem.BallCount -= 1;
                 spawnSystem.AddBallsToSpawn();
             }
         }

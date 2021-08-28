@@ -2017,6 +2017,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &313297682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3804528767719769327, guid: d7cda82beab599f41af86449fd698c6d, type: 3}
+  m_PrefabInstance: {fileID: 8994180793716687359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335115397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7242,6 +7253,10 @@ PrefabInstance:
       propertyPath: ballSpawner
       value: 
       objectReference: {fileID: 2142139751}
+    - target: {fileID: 6045316965569920221, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
+      propertyPath: ballCountTxt
+      value: 
+      objectReference: {fileID: 313297682}
     - target: {fileID: 8041480598783719030, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
       propertyPath: leftPedal
       value: 
