@@ -22,12 +22,6 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Quit Game
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Application.Quit();
-        }
-
         // Player Input For Pedals
 
         bool leftKeyBool = false;
