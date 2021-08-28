@@ -16,9 +16,13 @@ public class BouncePad : TriggerPad
     public AudioSource impactSound;
     public bool playSound = false;
 
-    public Vector3 bounceDirection;
-    public float bounceStrengthMultiplier;
     public BounceType bounceType;
+    public Vector3 bounceDirection;
+
+    public bool useRandomBounceMultiplier;
+    public float bounceStrengthMultiplierMin = -1;
+    public float bounceStrengthMultiplier;
+    
 
     public VisualEffect particleEffect;
 
@@ -73,8 +77,10 @@ public class BouncePad : TriggerPad
         }
 
 
+        float randMultiplier = useRandomBounceMultiplier ? Random.Range(bounceStrengthMultiplierMin, bounceStrengthMultiplier) : bounceStrengthMultiplier;
 
-        return bounceDireciton.normalized * bounceStrengthMultiplier;
+
+        return bounceDireciton.normalized * randMultiplier;
     }
 
     private void OnDrawGizmos()
