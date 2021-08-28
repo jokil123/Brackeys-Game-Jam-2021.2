@@ -18,7 +18,6 @@ public class SoundManager : MonoBehaviour
     }
 }
 
-[Serializable]
 public class AudioSource
 {
     public string name;
