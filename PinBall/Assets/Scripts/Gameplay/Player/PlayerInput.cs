@@ -42,5 +42,16 @@ public class PlayerInput : MonoBehaviour
                 Debug.Log("Started Game!");
             }
         }
+
+        // Sound For Pedals
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            leftPedal.pedalSound.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            rightPedal.pedalSound.Play();
+        }
     }
 }

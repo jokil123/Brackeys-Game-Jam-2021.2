@@ -7,6 +7,8 @@ public class Pedal : MonoBehaviour
     public Transform targetTransform;
     public Transform restTransform;
 
+    public AudioSource pedalSound;
+
     public float animationSpeed;
 
     private float currentAnimationValue;
@@ -24,6 +26,7 @@ public class Pedal : MonoBehaviour
     {
         AnimationPivot = gameObject.transform.Find("AnimationPivot").gameObject;
         AnimationRigidBody = AnimationPivot.GetComponent<Rigidbody>();
+        pedalSound = GetComponent<AudioSource>();
     }
      
 
