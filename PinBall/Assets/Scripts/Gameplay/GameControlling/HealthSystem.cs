@@ -29,14 +29,17 @@ public class HealthSystem : MonoBehaviour
     {
         get { return hp; }
         set {
-            hpSlider.value = value;
-            hp = (value >= 0 ? (value > maxHp ? maxHp : value) : 0);
-            if (hp == 0)
+            if (!gameObject.GetComponent<Secrets>().invincibilityOn)
             {
-                spawnSystem.gameIsRunning = false;
-                gameOverScoreText.text = $"Score: {scoreSystem.Score}";
-                gameOverUI.SetActive(true);
-                Health = maxHp;
+                hpSlider.value = value;
+                hp = (value >= 0 ? (value > maxHp ? maxHp : value) : 0);
+                if (hp == 0)
+                {
+                    spawnSystem.gameIsRunning = false;
+                    gameOverScoreText.text = $"Score: {scoreSystem.Score}";
+                    gameOverUI.SetActive(true);
+                    Health = maxHp;
+                }
             }
         }
     }

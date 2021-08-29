@@ -38,11 +38,16 @@ public class SpawnSystem : MonoBehaviour
         {
             if (BallCount < maxBalls)
             {
-                GameObject.Instantiate(ballPrefab, ballSpawner.position, ballSpawner.rotation);
-                BallCount += 1;
+                AddBall();
             }
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    public void AddBall()
+    {
+        GameObject.Instantiate(ballPrefab, ballSpawner.position, ballSpawner.rotation);
+        BallCount += 1;
     }
 
     public void AddBallsToSpawn()

@@ -7394,6 +7394,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1576659783}
     - target: {fileID: 6045316965569920221, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
+      propertyPath: ballPrefab
+      value: 
+      objectReference: {fileID: 592087860427526237, guid: e96c4eaa7b9c90344a62a4e7377c5344, type: 3}
+    - target: {fileID: 6045316965569920221, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
       propertyPath: ballSpawner
       value: 
       objectReference: {fileID: 2142139751}
@@ -7417,7 +7421,8 @@ PrefabInstance:
       propertyPath: startScreen
       value: 
       objectReference: {fileID: 1961785798}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4117885495722217738, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85fffc51c459d4b478c3222b61b92c4f, type: 3}
 --- !u!114 &1576659783 stripped
 MonoBehaviour:
