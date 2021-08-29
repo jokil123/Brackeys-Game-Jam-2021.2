@@ -52,7 +52,6 @@ MonoBehaviour:
   - {fileID: 8926484042661614980}
   - {fileID: 8926484042661614985}
   - {fileID: 8926484042661614992}
-  - {fileID: 8926484042661614999}
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
@@ -145,7 +144,7 @@ MonoBehaviour:
   m_ImportDependencies: []
   m_GraphVersion: 6
   m_ResourceVersion: 1
-  m_saved: 0
+  m_saved: 1
   m_SubgraphDependencies:
   - {fileID: 5371698745253816930, guid: 5a610101029a2224e92af2c7efbe9a9c, type: 3}
   m_CategoryPath: 
@@ -168,7 +167,7 @@ VisualEffectResource:
     m_UpdateMode: 0
     m_PreWarmDeltaTime: 0.05
     m_PreWarmStepCount: 0
-    m_InitialEventName: OnPlay
+    m_InitialEventName: 
 --- !u!114 &8926484042661614555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,11 +190,9 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots: []
   m_Label: Spawn system
-  m_Data: {fileID: 8926484042661615000}
+  m_Data: {fileID: 8926484042661615001}
   m_InputFlowSlot:
-  - link:
-    - context: {fileID: 8926484042661614999}
-      slotIndex: 0
+  - link: []
   - link: []
   m_OutputFlowSlot:
   - link:
@@ -4181,36 +4178,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 1
   m_LinkedSlots: []
---- !u!114 &8926484042661614999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2461f61b3c026d54db1951a4e17ab20e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UIIgnoredErrors: []
-  m_Parent: {fileID: 114350483966674976}
-  m_Children: []
-  m_UIPosition: {x: 928, y: -270}
-  m_UICollapsed: 0
-  m_UISuperCollapsed: 0
-  m_InputSlots: []
-  m_OutputSlots: []
-  m_Label: 
-  m_Data: {fileID: 8926484042661615000}
-  m_InputFlowSlot:
-  - link: []
-  m_OutputFlowSlot:
-  - link:
-    - context: {fileID: 8926484042661614555}
-      slotIndex: 0
-  eventName: OnPlay
---- !u!114 &8926484042661615000
+--- !u!114 &8926484042661615001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4230,5 +4198,4 @@ MonoBehaviour:
   m_UISuperCollapsed: 0
   title: 
   m_Owners:
-  - {fileID: 8926484042661614999}
   - {fileID: 8926484042661614555}
