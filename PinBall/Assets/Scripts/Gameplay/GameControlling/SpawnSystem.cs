@@ -47,7 +47,7 @@ public class SpawnSystem : MonoBehaviour
 
     public void AddBallsToSpawn()
     {
-        maxBalls = Mathf.FloorToInt((50 - (50 - 1) * Mathf.Exp(-0.03f * wave)));
+        maxBalls = Mathf.FloorToInt((50 - (50 - 1) * Mathf.Exp(-0.02f * wave)));
         ballsToSpawn = maxBalls - BallCount;
         wave++;
     }
@@ -69,6 +69,7 @@ public class SpawnSystem : MonoBehaviour
         BallCount = 0;
 
         maxBalls = 1;
+        wave = 1;
         ballsToSpawn = 1;
         gameIsRunning = true;
         StartCoroutine(SpawnBalls());

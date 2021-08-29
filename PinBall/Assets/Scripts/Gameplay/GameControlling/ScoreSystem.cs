@@ -32,12 +32,14 @@ public class ScoreSystem : MonoBehaviour
         set {
             _highScore = value;
             txtHighScore.text = $"High Score: {value}";
+            PlayerPrefs.SetInt("hs", value);
+            PlayerPrefs.Save();
         }
     }
 
     private void Start()
     {
-        HighScore = 0;
+        HighScore = PlayerPrefs.GetInt("hs");
         Score = 0;
     }
 }
